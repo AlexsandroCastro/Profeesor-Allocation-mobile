@@ -1,21 +1,18 @@
 package com.example.retrofit_room.model;
 
-import java.util.List;
 
 public class Departament {
 
-    private int id;
+    private Long id;
 
     private String name;
 
-    private transient List<Professors> professors;
 
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -27,11 +24,4 @@ public class Departament {
         this.name = name;
     }
 
-    public List<Professors> getProfessors() {
-        return professors;
-    }
-
-    public void setProfessors(List<Professors> professors) {
-        this.professors = professors;
-    }
 }
