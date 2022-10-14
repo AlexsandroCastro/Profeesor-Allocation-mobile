@@ -1,7 +1,6 @@
 package com.example.retrofit_room.service;
 
 import com.example.retrofit_room.model.Allocation;
-import com.example.retrofit_room.model.Curso;
 
 import java.util.List;
 

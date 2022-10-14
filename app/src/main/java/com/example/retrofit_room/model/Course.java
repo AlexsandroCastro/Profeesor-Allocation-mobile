@@ -2,7 +2,7 @@ package com.example.retrofit_room.model;
 
 
 
-public class Curso {
+public class Course {
 
     private int id;
 

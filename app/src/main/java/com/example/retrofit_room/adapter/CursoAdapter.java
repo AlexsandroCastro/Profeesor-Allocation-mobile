@@ -11,23 +11,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.retrofit_room.R;
-import com.example.retrofit_room.model.Curso;
-import com.example.retrofit_room.model.Departament;
+import com.example.retrofit_room.model.Course;
 
 import java.util.List;
 
 
-public class CursoAdapter extends ArrayAdapter<Curso> {
+public class CursoAdapter extends ArrayAdapter<Course> {
 
-    public CursoAdapter(@NonNull Context context, List<Curso> list) {
+    public CursoAdapter(@NonNull Context context, List<Course> list) {
         super(context, 0, list);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View root = LayoutInflater.from(getContext()).inflate(R.layout.adapter_departament, parent, false);
-        Curso curso = getItem(position);
+        View root = LayoutInflater.from(getContext()).inflate(R.layout.adapter_curso, parent, false);
+        Course curso = getItem(position);
 
 
         TextView text = root.findViewById(R.id.text);

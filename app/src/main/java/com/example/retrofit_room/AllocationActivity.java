@@ -9,9 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.retrofit_room.adapter.AllocationAdapter;
-import com.example.retrofit_room.adapter.CursoAdapter;
 import com.example.retrofit_room.model.Allocation;
-import com.example.retrofit_room.model.Curso;
 import com.example.retrofit_room.service.AllocationService;
 
 import java.util.List;

@@ -6,6 +6,34 @@ public class Allocation {
 
     private String dayOfWeek;
 
+    private Professor professor;
+
+    private Course course;
+
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public void setDayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public Course getCurso() {
+        return course;
+    }
+
+    public void setCurso(Course curso) {
+        this.course = curso;
+    }
+
     public int getId() {
         return id;
     }

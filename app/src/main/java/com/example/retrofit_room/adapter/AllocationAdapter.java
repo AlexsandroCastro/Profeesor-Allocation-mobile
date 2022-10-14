@@ -1,5 +1,6 @@
 package com.example.retrofit_room.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import androidx.annotation.Nullable;
 
 import com.example.retrofit_room.R;
 import com.example.retrofit_room.model.Allocation;
-import com.example.retrofit_room.model.Curso;
 
 import java.util.List;
 
@@ -26,12 +26,16 @@ public class AllocationAdapter extends ArrayAdapter<Allocation> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View root = LayoutInflater.from(getContext()).inflate(R.layout.adapter_departament, parent, false);
+        View root = LayoutInflater.from(getContext()).inflate(R.layout.adapter_allocation, parent, false);
         Allocation allocation = getItem(position);
 
 
         TextView text = root.findViewById(R.id.text);
-        text.setText(allocation.getName());
+        TextView professor = root.findViewById(R.id.tv_professor);
+        TextView curso = root.findViewById(R.id.tv_curso);
+        text.setText("Dia : " + allocation.getName());
+        professor.setText("Professor : "  + allocation.getProfessor().getName());
+        curso.setText("Curso : "  + allocation.getCurso().getName());
 
         return root;
     }

@@ -9,9 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.retrofit_room.adapter.CursoAdapter;
-import com.example.retrofit_room.adapter.DepartamentAdapter;
-import com.example.retrofit_room.model.Curso;
-import com.example.retrofit_room.model.Departament;
+import com.example.retrofit_room.model.Course;
 import com.example.retrofit_room.service.CursoService;
 
 import java.util.List;
@@ -38,12 +36,12 @@ public class CursoActivity extends AppCompatActivity {
                 .newInstance()
                 .courseService();
 
-        servicee.getAllCousers().enqueue(new Callback<List<Curso>>() {
+        servicee.getAllCousers().enqueue(new Callback<List<Course>>() {
             @Override
-            public void onResponse(Call<List<Curso>> call, Response<List<Curso>> response) {
-                List<Curso> lista = response.body();
+            public void onResponse(Call<List<Course>> call, Response<List<Course>> response) {
+                List<Course> lista = response.body();
 
-                for (Curso item : lista){
+                for (Course item : lista){
                     Log.e(">>>>", item.getName());
                 }
 
@@ -51,13 +49,13 @@ public class CursoActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Curso>> call, Throwable t) {
+            public void onFailure(Call<List<Course>> call, Throwable t) {
 
             }
         });
     }
 
-    private void setAdapter(List<Curso> cursos){
+    private void setAdapter(List<Course> cursos){
 
         CursoAdapter cursoAdapter = new CursoAdapter(CursoActivity.this, cursos);
         cursoAdapter.setDropDownViewResource(0);
@@ -65,7 +63,7 @@ public class CursoActivity extends AppCompatActivity {
 
         list.setOnItemClickListener((adapterView, view, i, l) -> {
 
-            Curso curso = cursoAdapter.getItem(i);
+            Course curso = cursoAdapter.getItem(i);
             Toast.makeText(CursoActivity.this, " Curso "
                     + curso.getName(), Toast.LENGTH_LONG).show();
 

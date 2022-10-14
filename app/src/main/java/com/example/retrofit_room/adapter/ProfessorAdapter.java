@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.retrofit_room.R;
-import com.example.retrofit_room.model.Curso;
 import com.example.retrofit_room.model.Professor;
 
 import java.util.List;
